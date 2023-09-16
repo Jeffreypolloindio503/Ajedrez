@@ -1,0 +1,11 @@
+C:\Users\jeffr\source\repos\ajedrezproyecto\bin\Debug\ajedrezproyecto.exe.config
+C:\Users\jeffr\source\repos\ajedrezproyecto\bin\Debug\ajedrezproyecto.exe
+C:\Users\jeffr\source\repos\ajedrezproyecto\bin\Debug\ajedrezproyecto.pdb
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.csproj.AssemblyReference.cache
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.Form1.resources
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.Properties.Resources.resources
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.csproj.GenerateResource.cache
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.csproj.CoreCompileInputs.cache
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.exe
+C:\Users\jeffr\source\repos\ajedrezproyecto\obj\Debug\ajedrezproyecto.pdb
