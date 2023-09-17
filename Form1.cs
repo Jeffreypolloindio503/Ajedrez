@@ -71,9 +71,15 @@ namespace ajedrezproyecto
                             button.BackgroundImage = part1;
                             break;
                     }
+                    butt.Click += new EventHandler(OnFigurePress); //inicio miguel
                     this.Controls.Add(button);  //prueba 
                 }
             }
+        }
+        public void OnFigurePress(object sneder, EventArgs e)
+        {
+           Button pressedButton = sender as Button;
+           pressedButton.BackColor= Color. Red;
         }
     }
 }
