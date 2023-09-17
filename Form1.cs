@@ -47,6 +47,17 @@ namespace ajedrezproyecto
         }
         public void Init()
         {
+             map = new int[8, 8]
+           {
+           {15,14,13,12,11,13,14,15},
+           {16,16,16,16,16,16,16,16},
+           {0,0,0,0,0,0,0,0},
+           {0,0,0,0,0,0,0,0},
+           {0,0,0,0,0,0,0,0},
+           {0,0,0,0,0,0,0,0},
+           {26,26,26,26,26,26,26,26},
+           {25,24,23,22,21,23,24,25},
+           };
             currPlayer = 1;
       
             CreateMap();
@@ -92,6 +103,8 @@ namespace ajedrezproyecto
            if (prevButton != null)
                prevButton.BackColor= Color. White;
            Button pressedButton = sender as Button;
+           
+           pressedButton.Enabled = false;
            if (map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50] != 0 && map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50]/10 == currPlayer)
            {
            pressedButton.BackColor= Color. Red;
@@ -123,6 +136,8 @@ namespace ajedrezproyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+        this.Controls.Clear();
+        Init();
 
         }
     }
