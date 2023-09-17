@@ -71,7 +71,7 @@ namespace ajedrezproyecto
                             button.BackgroundImage = part1;
                             break;
                     }
-                    this.Controls.Add(button);  
+                    this.Controls.Add(button);  //prueba miguuel
                 }
             }
         }
