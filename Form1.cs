@@ -28,6 +28,8 @@ namespace ajedrezproyecto
         {25,24,23,22,21,23,24,25},
 
         };
+        public int currPlayer;
+        
         public Button prevButton;
 
         public bool isMoving=false;
@@ -45,8 +47,8 @@ namespace ajedrezproyecto
         }
         public void Init()
         {
-
-
+            currPlayer = 1;
+      
             CreateMap();
         }
         public void CreateMap()
@@ -86,7 +88,7 @@ namespace ajedrezproyecto
            if (prevButton != null)
                prevButton.BackColor= Color. White;
            Button pressedButton = sender as Button;
-           if (map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50] != 0)
+           if (map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50] != 0 && map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50]/10 == currPlayer)
            {
            pressedButton.BackColor= Color. Red;
            isMoving= true;
@@ -98,9 +100,18 @@ namespace ajedrezproyecto
                map[prevButton.Location.Y / 50, prevButton.Location.X / 50]=temp;
                pressedButton.BackgroundImage= prevButton.BackgroundImage;
                prevButton.BackgroundImage = null;
+               isMoving = false;
+               SwitchPlayer();
   
            }
+           
            prevButton=pressedButton;
+        }
+        public void SwitchPlayer()
+        {
+        if(currPlayer==1)
+        currplayer=2;
+        else currPlayer=1
         }
     }
 }
