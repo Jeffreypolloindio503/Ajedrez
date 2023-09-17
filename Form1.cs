@@ -28,6 +28,10 @@ namespace ajedrezproyecto
         {25,24,23,22,21,23,24,25},
 
         };
+        public Button prevButton;
+
+        public bool isMoving=false;
+        
         public Form1()
         {
             InitializeComponent();
@@ -71,15 +75,38 @@ namespace ajedrezproyecto
                             button.BackgroundImage = part1;
                             break;
                     }
+ 
                     button.Click += new EventHandler(OnFigurePress); //inicio miguel
+
+                    button.BackColor=Color.White;
+                    button.Click += new EventHandler(OnFigurePress); //inicio miguel
+
                     this.Controls.Add(button);  //prueba 
                 }
             }
         }
         public void OnFigurePress(object sender, EventArgs e)
         {
+           if (prevButton != null)
+               prevButton.BackColor= Color. White;
            Button pressedButton = sender as Button;
+           if (map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50] != 0)
+           {
            pressedButton.BackColor= Color. Red;
+           isMoving= true;
+           } else 
+           {
+              if (isMoving) 
+              { 
+               int temp = map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50];
+               map[pressedButton.Location.Y / 50, pressedButton.Location.X / 50]= map[prevButton.Location.Y / 50, prevButton.Location.X / 50];
+               map[prevButton.Location.Y / 50, prevButton.Location.X / 50]= temp;
+               pressedButton.BackgroundImage= prevButton.BackgroundImage;
+               prevButton.BackgroundImage = null;
+              }
+
+            }
+           prevButton=pressedButton;
         }
     }
 }
